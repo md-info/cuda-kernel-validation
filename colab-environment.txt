@@ -1,0 +1,53 @@
+Thu Oct  1 02:09:16 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.82.07              Driver Version: 580.82.07      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla T4                       Off |   00000000:00:04.0 Off |                    0 |
+| N/A   43C    P8              9W /   70W |       0MiB /  15360MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Fri_Feb_21_20:23:50_PST_2025
+Cuda compilation tools, release 12.8, V12.8.93
+Build cuda_12.8.r12.8/compiler.35583870_0
+
+Cloning into '/content/pr456-cuda-samples'...
+Updating files:  87% (1261/1442)
+Updating files:  88% (1269/1442)
+Updating files:  89% (1284/1442)
+Updating files:  90% (1298/1442)
+Updating files:  91% (1313/1442)
+Updating files:  92% (1327/1442)
+Updating files:  93% (1342/1442)
+Updating files:  94% (1356/1442)
+Updating files:  95% (1370/1442)
+Updating files:  96% (1385/1442)
+Updating files:  97% (1399/1442)
+Updating files:  98% (1414/1442)
+Updating files:  99% (1428/1442)
+Updating files: 100% (1442/1442)
+Updating files: 100% (1442/1442), done.
+
+From https://github.com/NVIDIA/cuda-samples
+ * branch            refs/pull/456/head -> FETCH_HEAD
+
+fd6f3f85e6ec1d35359c1a47139edacc0e328cf7
+
+HEAD is now at fd6f3f8 fix(matrixMul): handle non-multiple tile dimensions
+
+
+41

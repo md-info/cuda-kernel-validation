@@ -1,0 +1,79 @@
+7.5
+
+
+GPU=Tesla T4 sm=75 driver=13000 runtime=12080
+tile=16 M=1 N=1 K=1 max_abs_error=0 PASS
+tile=16 M=7 N=5 K=3 max_abs_error=0 PASS
+tile=16 M=15 N=17 K=31 max_abs_error=0 PASS
+tile=16 M=16 N=16 K=16 max_abs_error=0 PASS
+tile=16 M=17 N=15 K=17 max_abs_error=0 PASS
+tile=16 M=31 N=33 K=32 max_abs_error=0 PASS
+tile=16 M=32 N=32 K=32 max_abs_error=0 PASS
+tile=16 M=33 N=31 K=33 max_abs_error=0 PASS
+tile=16 M=63 N=65 K=67 max_abs_error=0 PASS
+tile=16 M=65 N=63 K=64 max_abs_error=0 PASS
+tile=16 M=97 N=101 K=127 max_abs_error=0 PASS
+tile=32 M=1 N=1 K=1 max_abs_error=0 PASS
+tile=32 M=7 N=5 K=3 max_abs_error=0 PASS
+tile=32 M=15 N=17 K=31 max_abs_error=0 PASS
+tile=32 M=16 N=16 K=16 max_abs_error=0 PASS
+tile=32 M=17 N=15 K=17 max_abs_error=0 PASS
+tile=32 M=31 N=33 K=32 max_abs_error=0 PASS
+tile=32 M=32 N=32 K=32 max_abs_error=0 PASS
+tile=32 M=33 N=31 K=33 max_abs_error=0 PASS
+tile=32 M=63 N=65 K=67 max_abs_error=0 PASS
+tile=32 M=65 N=63 K=64 max_abs_error=0 PASS
+tile=32 M=97 N=101 K=127 max_abs_error=0 PASS
+
+========= COMPUTE-SANITIZER
+GPU=Tesla T4 sm=75 driver=13000 runtime=12080
+tile=16 M=1 N=1 K=1 max_abs_error=0 PASS
+tile=16 M=7 N=5 K=3 max_abs_error=0 PASS
+tile=16 M=15 N=17 K=31 max_abs_error=0 PASS
+tile=16 M=16 N=16 K=16 max_abs_error=0 PASS
+tile=16 M=17 N=15 K=17 max_abs_error=0 PASS
+tile=16 M=31 N=33 K=32 max_abs_error=0 PASS
+tile=16 M=32 N=32 K=32 max_abs_error=0 PASS
+tile=16 M=33 N=31 K=33 max_abs_error=0 PASS
+tile=16 M=63 N=65 K=67 max_abs_error=0 PASS
+tile=16 M=65 N=63 K=64 max_abs_error=0 PASS
+tile=16 M=97 N=101 K=127 max_abs_error=0 PASS
+tile=32 M=1 N=1 K=1 max_abs_error=0 PASS
+tile=32 M=7 N=5 K=3 max_abs_error=0 PASS
+tile=32 M=15 N=17 K=31 max_abs_error=0 PASS
+tile=32 M=16 N=16 K=16 max_abs_error=0 PASS
+tile=32 M=17 N=15 K=17 max_abs_error=0 PASS
+tile=32 M=31 N=33 K=32 max_abs_error=0 PASS
+tile=32 M=32 N=32 K=32 max_abs_error=0 PASS
+tile=32 M=33 N=31 K=33 max_abs_error=0 PASS
+tile=32 M=63 N=65 K=67 max_abs_error=0 PASS
+tile=32 M=65 N=63 K=64 max_abs_error=0 PASS
+tile=32 M=97 N=101 K=127 max_abs_error=0 PASS
+========= ERROR SUMMARY: 0 errors
+
+========= COMPUTE-SANITIZER
+GPU=Tesla T4 sm=75 driver=13000 runtime=12080
+tile=16 M=1 N=1 K=1 max_abs_error=0 PASS
+tile=16 M=7 N=5 K=3 max_abs_error=0 PASS
+tile=16 M=15 N=17 K=31 max_abs_error=0 PASS
+tile=16 M=16 N=16 K=16 max_abs_error=0 PASS
+tile=16 M=17 N=15 K=17 max_abs_error=0 PASS
+tile=16 M=31 N=33 K=32 max_abs_error=0 PASS
+tile=16 M=32 N=32 K=32 max_abs_error=0 PASS
+tile=16 M=33 N=31 K=33 max_abs_error=0 PASS
+tile=16 M=63 N=65 K=67 max_abs_error=0 PASS
+tile=16 M=65 N=63 K=64 max_abs_error=0 PASS
+tile=16 M=97 N=101 K=127 max_abs_error=0 PASS
+tile=32 M=1 N=1 K=1 max_abs_error=0 PASS
+tile=32 M=7 N=5 K=3 max_abs_error=0 PASS
+tile=32 M=15 N=17 K=31 max_abs_error=0 PASS
+tile=32 M=16 N=16 K=16 max_abs_error=0 PASS
+tile=32 M=17 N=15 K=17 max_abs_error=0 PASS
+tile=32 M=31 N=33 K=32 max_abs_error=0 PASS
+tile=32 M=32 N=32 K=32 max_abs_error=0 PASS
+tile=32 M=33 N=31 K=33 max_abs_error=0 PASS
+tile=32 M=63 N=65 K=67 max_abs_error=0 PASS
+tile=32 M=65 N=63 K=64 max_abs_error=0 PASS
+tile=32 M=97 N=101 K=127 max_abs_error=0 PASS
+========= ERROR SUMMARY: 0 errors
+

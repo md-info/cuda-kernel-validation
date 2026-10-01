@@ -14,7 +14,7 @@ Tested commit: `fd6f3f85e6ec1d35359c1a47139edacc0e328cf7`.
 | Compute Sanitizer memcheck | 0 errors |
 | Compute Sanitizer synccheck | 0 errors |
 
-Run on September 30, 2026 (Toronto); environment log timestamps use UTC. Raw evidence: [environment](colab-environment.txt), [validation and sanitizer output](colab-validation.txt). Logs were captured from the rendered Colab cell outputs; they are not fabricated benchmark tables.
+Run on September 30, 2026 (Toronto); environment log timestamps use UTC. Raw evidence: [environment](colab-environment.txt), [validation and sanitizer output](colab-validation.txt). Logs were captured from the Colab cell outputs.
 
 ## Reproduce
 
@@ -43,7 +43,7 @@ Partial tile lanes load zero but still participate in both block barriers. An ea
 
 ## Scope and provenance
 
-The upstream kernel and boundary fix are authored by the contributors to NVIDIA/cuda-samples, including PR author efegokdemir. This repository contributes an external validation harness and reproducible evidence, not that kernel's authorship. The harness, notebook and documentation were prepared with Codex assistance and executed through a signed-in Colab session. No claim is made that this is unaided work.
+The upstream kernel and boundary fix are authored by the contributors to NVIDIA/cuda-samples, including PR author efegokdemir. This repository contributes an external validation harness and reproducible evidence, not that kernel's authorship. The harness, notebook and documentation were prepared with Codex assistance and executed through a signed-in Colab session.
 
 This is targeted validation on one GPU, not a full repository test suite, a performance study, or a merged code contribution. Larger cases, randomized floating-point inputs, more architectures and racecheck remain future coverage.
 

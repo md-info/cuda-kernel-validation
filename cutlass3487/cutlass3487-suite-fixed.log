@@ -1,0 +1,123 @@
+Note: Google Test filter = -SM80*:SM89*:SM90*:SM100*:*sm100_*
+[==========] Running 22 tests from 3 test suites.
+[----------] Global test environment set-up.
+[----------] 9 tests from SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b
+[ RUN      ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.64x8_w1
+[       OK ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.64x8_w1 (168 ms)
+[ RUN      ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.64x16_w1
+[       OK ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.64x16_w1 (0 ms)
+[ RUN      ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.64x16_w2
+[       OK ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.64x16_w2 (0 ms)
+[ RUN      ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.128x8_w1
+[       OK ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.128x8_w1 (0 ms)
+[ RUN      ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.64x32_w4
+[       OK ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.64x32_w4 (0 ms)
+[ RUN      ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.128x32_w1
+[       OK ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.128x32_w1 (0 ms)
+[ RUN      ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.128x32_w4
+[       OK ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.128x32_w4 (0 ms)
+[ RUN      ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.256x32_w4
+[       OK ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.256x32_w4 (0 ms)
+[ RUN      ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.256x32_w8
+[       OK ] SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b.256x32_w8 (0 ms)
+[----------] 9 tests from SM75_gemm_threadblock_tensor_op_multplicand_iterator_congruous_16b (170 ms total)
+
+[----------] 9 tests from Transform_threadblock_PredicatedTileIterator
+[ RUN      ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined
+[       OK ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined (0 ms)
+[ RUN      ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined_2dtile_128x4
+[       OK ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined_2dtile_128x4 (0 ms)
+[ RUN      ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined_2dtile_128x64
+[       OK ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined_2dtile_128x64 (0 ms)
+[ RUN      ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined_2dtile_64x64
+[       OK ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined_2dtile_64x64 (0 ms)
+[ RUN      ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined_2dtile_64x8
+[       OK ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined_2dtile_64x8 (0 ms)
+[ RUN      ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined_2dtile_64x32_transpose4x4
+[       OK ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined_2dtile_64x32_transpose4x4 (0 ms)
+[ RUN      ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined_2dtile_64x29_transpose4x4
+[       OK ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined_2dtile_64x29_transpose4x4 (0 ms)
+[ RUN      ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined_2dtile_120x4_transpose4x4
+[       OK ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined_2dtile_120x4_transpose4x4 (0 ms)
+[ RUN      ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined_2dtile_48x29_transpose4x4
+[       OK ] Transform_threadblock_PredicatedTileIterator.PitchLinear_Stripmined_2dtile_48x29_transpose4x4 (0 ms)
+[----------] 9 tests from Transform_threadblock_PredicatedTileIterator (3 ms total)
+
+[----------] 4 tests from Transform_Threadblock_PredicatedTileAccessIterator
+[ RUN      ] Transform_Threadblock_PredicatedTileAccessIterator.TileOffsetFp16Rank0
+type=fp16 rank=0 steady=0 extent=64 move=(0,0) expected=0 actual=0 PASS
+type=fp16 rank=0 steady=0 extent=64 move=(1,0) expected=64 actual=64 PASS
+type=fp16 rank=0 steady=0 extent=64 move=(0,1) expected=2048 actual=2048 PASS
+type=fp16 rank=0 steady=0 extent=64 move=(1,1) expected=2112 actual=2112 PASS
+type=fp16 rank=0 steady=0 extent=67 move=(0,0) expected=-58 actual=-58 PASS
+type=fp16 rank=0 steady=0 extent=67 move=(1,0) expected=6 actual=6 PASS
+type=fp16 rank=0 steady=0 extent=67 move=(0,1) expected=1990 actual=1990 PASS
+type=fp16 rank=0 steady=0 extent=67 move=(1,1) expected=2054 actual=2054 PASS
+type=fp16 rank=0 steady=1 extent=64 move=(0,0) expected=0 actual=0 PASS
+type=fp16 rank=0 steady=1 extent=64 move=(1,0) expected=64 actual=64 PASS
+type=fp16 rank=0 steady=1 extent=64 move=(0,1) expected=2048 actual=2048 PASS
+type=fp16 rank=0 steady=1 extent=64 move=(1,1) expected=2112 actual=2112 PASS
+type=fp16 rank=0 steady=1 extent=67 move=(0,0) expected=0 actual=0 PASS
+type=fp16 rank=0 steady=1 extent=67 move=(1,0) expected=64 actual=64 PASS
+type=fp16 rank=0 steady=1 extent=67 move=(0,1) expected=2048 actual=2048 PASS
+type=fp16 rank=0 steady=1 extent=67 move=(1,1) expected=2112 actual=2112 PASS
+[       OK ] Transform_Threadblock_PredicatedTileAccessIterator.TileOffsetFp16Rank0 (0 ms)
+[ RUN      ] Transform_Threadblock_PredicatedTileAccessIterator.TileOffsetFp16Rank1
+type=fp16 rank=1 steady=0 extent=64 move=(0,0) expected=0 actual=0 PASS
+type=fp16 rank=1 steady=0 extent=64 move=(1,0) expected=64 actual=64 PASS
+type=fp16 rank=1 steady=0 extent=64 move=(0,1) expected=2048 actual=2048 PASS
+type=fp16 rank=1 steady=0 extent=64 move=(1,1) expected=2112 actual=2112 PASS
+type=fp16 rank=1 steady=0 extent=67 move=(0,0) expected=-512 actual=-512 PASS
+type=fp16 rank=1 steady=0 extent=67 move=(1,0) expected=-448 actual=-448 PASS
+type=fp16 rank=1 steady=0 extent=67 move=(0,1) expected=1536 actual=1536 PASS
+type=fp16 rank=1 steady=0 extent=67 move=(1,1) expected=1600 actual=1600 PASS
+type=fp16 rank=1 steady=1 extent=64 move=(0,0) expected=0 actual=0 PASS
+type=fp16 rank=1 steady=1 extent=64 move=(1,0) expected=64 actual=64 PASS
+type=fp16 rank=1 steady=1 extent=64 move=(0,1) expected=2048 actual=2048 PASS
+type=fp16 rank=1 steady=1 extent=64 move=(1,1) expected=2112 actual=2112 PASS
+type=fp16 rank=1 steady=1 extent=67 move=(0,0) expected=0 actual=0 PASS
+type=fp16 rank=1 steady=1 extent=67 move=(1,0) expected=64 actual=64 PASS
+type=fp16 rank=1 steady=1 extent=67 move=(0,1) expected=2048 actual=2048 PASS
+type=fp16 rank=1 steady=1 extent=67 move=(1,1) expected=2112 actual=2112 PASS
+[       OK ] Transform_Threadblock_PredicatedTileAccessIterator.TileOffsetFp16Rank1 (0 ms)
+[ RUN      ] Transform_Threadblock_PredicatedTileAccessIterator.TileOffsetFp32Rank0
+type=fp32 rank=0 steady=0 extent=64 move=(0,0) expected=0 actual=0 PASS
+type=fp32 rank=0 steady=0 extent=64 move=(1,0) expected=128 actual=128 PASS
+type=fp32 rank=0 steady=0 extent=64 move=(0,1) expected=4096 actual=4096 PASS
+type=fp32 rank=0 steady=0 extent=64 move=(1,1) expected=4224 actual=4224 PASS
+type=fp32 rank=0 steady=0 extent=67 move=(0,0) expected=-116 actual=-116 PASS
+type=fp32 rank=0 steady=0 extent=67 move=(1,0) expected=12 actual=12 PASS
+type=fp32 rank=0 steady=0 extent=67 move=(0,1) expected=3980 actual=3980 PASS
+type=fp32 rank=0 steady=0 extent=67 move=(1,1) expected=4108 actual=4108 PASS
+type=fp32 rank=0 steady=1 extent=64 move=(0,0) expected=0 actual=0 PASS
+type=fp32 rank=0 steady=1 extent=64 move=(1,0) expected=128 actual=128 PASS
+type=fp32 rank=0 steady=1 extent=64 move=(0,1) expected=4096 actual=4096 PASS
+type=fp32 rank=0 steady=1 extent=64 move=(1,1) expected=4224 actual=4224 PASS
+type=fp32 rank=0 steady=1 extent=67 move=(0,0) expected=0 actual=0 PASS
+type=fp32 rank=0 steady=1 extent=67 move=(1,0) expected=128 actual=128 PASS
+type=fp32 rank=0 steady=1 extent=67 move=(0,1) expected=4096 actual=4096 PASS
+type=fp32 rank=0 steady=1 extent=67 move=(1,1) expected=4224 actual=4224 PASS
+[       OK ] Transform_Threadblock_PredicatedTileAccessIterator.TileOffsetFp32Rank0 (0 ms)
+[ RUN      ] Transform_Threadblock_PredicatedTileAccessIterator.TileOffsetFp32Rank1
+type=fp32 rank=1 steady=0 extent=64 move=(0,0) expected=0 actual=0 PASS
+type=fp32 rank=1 steady=0 extent=64 move=(1,0) expected=128 actual=128 PASS
+type=fp32 rank=1 steady=0 extent=64 move=(0,1) expected=4096 actual=4096 PASS
+type=fp32 rank=1 steady=0 extent=64 move=(1,1) expected=4224 actual=4224 PASS
+type=fp32 rank=1 steady=0 extent=67 move=(0,0) expected=-1024 actual=-1024 PASS
+type=fp32 rank=1 steady=0 extent=67 move=(1,0) expected=-896 actual=-896 PASS
+type=fp32 rank=1 steady=0 extent=67 move=(0,1) expected=3072 actual=3072 PASS
+type=fp32 rank=1 steady=0 extent=67 move=(1,1) expected=3200 actual=3200 PASS
+type=fp32 rank=1 steady=1 extent=64 move=(0,0) expected=0 actual=0 PASS
+type=fp32 rank=1 steady=1 extent=64 move=(1,0) expected=128 actual=128 PASS
+type=fp32 rank=1 steady=1 extent=64 move=(0,1) expected=4096 actual=4096 PASS
+type=fp32 rank=1 steady=1 extent=64 move=(1,1) expected=4224 actual=4224 PASS
+type=fp32 rank=1 steady=1 extent=67 move=(0,0) expected=0 actual=0 PASS
+type=fp32 rank=1 steady=1 extent=67 move=(1,0) expected=128 actual=128 PASS
+type=fp32 rank=1 steady=1 extent=67 move=(0,1) expected=4096 actual=4096 PASS
+type=fp32 rank=1 steady=1 extent=67 move=(1,1) expected=4224 actual=4224 PASS
+[       OK ] Transform_Threadblock_PredicatedTileAccessIterator.TileOffsetFp32Rank1 (0 ms)
+[----------] 4 tests from Transform_Threadblock_PredicatedTileAccessIterator (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 22 tests from 3 test suites ran. (176 ms total)
+[  PASSED  ] 22 tests.

@@ -1,0 +1,75 @@
+{"python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]", "platform": "Windows-11-10.0.26200-SP0", "binary": "C:\\Windows\\System32\\where.exe"}
+{"version": "base", "discovered": ["artifact.cu", "artifact.json", "artifact.lib", "artifact.obj", "artifact.pdb", "artifact.py", "artifact.txt", "probe.exe", "upper.EXE"]}
+Starting probe.exe absolute
+    Command (probe.exe absolute): ./probe.exe /Q cmd.exe
+Error running probe.exe absolute: [WinError 2] The system cannot find the file specified
+Starting probe.exe relative_nested
+    Command (probe.exe relative_nested): ./probe.exe /Q cmd.exe
+Error running probe.exe relative_nested: [WinError 2] The system cannot find the file specified
+Starting probe.exe bare_name
+    Command (probe.exe bare_name): ./probe.exe /Q cmd.exe
+Error running probe.exe bare_name: [WinError 123] The filename, directory name, or volume label syntax is incorrect
+{"version": "head", "discovered": ["probe.exe", "upper.EXE"]}
+Starting probe.exe absolute
+    Command (probe.exe absolute): C:\Users\M3\Documents\Codex\2026-09-30\files-pasted-by-the-user-codex\outputs\samples462-review\fixture with spaces\probe.exe /Q cmd.exe
+    Finished probe.exe absolute: Passed (code 0)
+Starting probe.exe relative_nested
+    Command (probe.exe relative_nested): C:\Users\M3\Documents\Codex\2026-09-30\files-pasted-by-the-user-codex\outputs\samples462-review\fixture with spaces\probe.exe /Q cmd.exe
+    Finished probe.exe relative_nested: Passed (code 0)
+Starting probe.exe bare_name
+    Command (probe.exe bare_name): C:\Users\M3\Documents\Codex\2026-09-30\files-pasted-by-the-user-codex\outputs\samples462-review\fixture with spaces\probe.exe /Q cmd.exe
+Error running probe.exe bare_name: [WinError 123] The filename, directory name, or volume label syntax is incorrect
+{
+  "records": [
+    {
+      "version": "base",
+      "case": "absolute",
+      "name": "probe.exe",
+      "description": "absolute",
+      "return_code": -1,
+      "status": "Error: [WinError 2] The system cannot find the file specified"
+    },
+    {
+      "version": "base",
+      "case": "relative_nested",
+      "name": "probe.exe",
+      "description": "relative_nested",
+      "return_code": -1,
+      "status": "Error: [WinError 2] The system cannot find the file specified"
+    },
+    {
+      "version": "base",
+      "case": "bare_name",
+      "name": "probe.exe",
+      "description": "bare_name",
+      "return_code": -1,
+      "status": "Error: [WinError 123] The filename, directory name, or volume label syntax is incorrect"
+    },
+    {
+      "version": "head",
+      "case": "absolute",
+      "name": "probe.exe",
+      "description": "absolute",
+      "return_code": 0,
+      "status": "Passed"
+    },
+    {
+      "version": "head",
+      "case": "relative_nested",
+      "name": "probe.exe",
+      "description": "relative_nested",
+      "return_code": 0,
+      "status": "Passed"
+    },
+    {
+      "version": "head",
+      "case": "bare_name",
+      "name": "probe.exe",
+      "description": "bare_name",
+      "return_code": -1,
+      "status": "Error: [WinError 123] The filename, directory name, or volume label syntax is incorrect"
+    }
+  ],
+  "status": "PASS",
+  "bare_name_control": "normalized cwd passes"
+}

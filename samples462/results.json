@@ -1,0 +1,50 @@
+[
+  {
+    "version": "base",
+    "case": "absolute",
+    "name": "probe.exe",
+    "description": "absolute",
+    "return_code": -1,
+    "status": "Error: [WinError 2] The system cannot find the file specified"
+  },
+  {
+    "version": "base",
+    "case": "relative_nested",
+    "name": "probe.exe",
+    "description": "relative_nested",
+    "return_code": -1,
+    "status": "Error: [WinError 2] The system cannot find the file specified"
+  },
+  {
+    "version": "base",
+    "case": "bare_name",
+    "name": "probe.exe",
+    "description": "bare_name",
+    "return_code": -1,
+    "status": "Error: [WinError 123] The filename, directory name, or volume label syntax is incorrect"
+  },
+  {
+    "version": "head",
+    "case": "absolute",
+    "name": "probe.exe",
+    "description": "absolute",
+    "return_code": 0,
+    "status": "Passed"
+  },
+  {
+    "version": "head",
+    "case": "relative_nested",
+    "name": "probe.exe",
+    "description": "relative_nested",
+    "return_code": 0,
+    "status": "Passed"
+  },
+  {
+    "version": "head",
+    "case": "bare_name",
+    "name": "probe.exe",
+    "description": "bare_name",
+    "return_code": -1,
+    "status": "Error: [WinError 123] The filename, directory name, or volume label syntax is incorrect"
+  }
+]

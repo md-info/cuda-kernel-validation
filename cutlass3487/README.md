@@ -24,4 +24,4 @@ The patch intentionally covers only the tested non-gather, non-permuted pitch-li
 
 ## Attribution and status
 
-The bug was reported by the upstream issue author. The regression, patch preparation, and documentation were produced with Codex assistance and executed in the user's Colab session. The upstream library remains NVIDIA CUTLASS code. No public PR or merge is claimed by these local artifacts.
+The bug was reported by the upstream issue author. The regression, patch preparation, and documentation were produced with Codex assistance and executed in the user's Colab session. The upstream library remains NVIDIA CUTLASS code. Upstream PR: https://github.com/NVIDIA/cutlass/pull/3704 . Open for review as of September 30, 2026; not merged.

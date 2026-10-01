@@ -1,0 +1,18 @@
+--- a/cpp/0_Introduction/vectorAddDrv/CMakeLists.txt
++++ b/cpp/0_Introduction/vectorAddDrv/CMakeLists.txt
+@@ -46,9 +46,14 @@
+     string(JOIN " " INCLUDES "${INCLUDES_LIST}")
+ endif()
+ 
++set(CUDA_HOST_COMPILER_ARGS)
++if(CMAKE_CUDA_HOST_COMPILER)
++    list(APPEND CUDA_HOST_COMPILER_ARGS "-ccbin=${CMAKE_CUDA_HOST_COMPILER}")
++endif()
++
+ add_custom_command(
+     OUTPUT ${CUDA_FATBIN_FILE}
+-    COMMAND ${CMAKE_CUDA_COMPILER} ${INCLUDES} -Wno-deprecated-gpu-targets -ccbin=${CMAKE_CUDA_HOST_COMPILER} ${GENCODE_FLAGS} -o ${CUDA_FATBIN_FILE} -fatbin ${CUDA_KERNEL_SOURCE}
++    COMMAND ${CMAKE_CUDA_COMPILER} ${INCLUDES} -Wno-deprecated-gpu-targets ${CUDA_HOST_COMPILER_ARGS} ${GENCODE_FLAGS} -o ${CUDA_FATBIN_FILE} -fatbin ${CUDA_KERNEL_SOURCE}
+     DEPENDS ${CUDA_KERNEL_SOURCE}
+     COMMENT "Building CUDA fatbin: ${CUDA_FATBIN_FILE}"
+ )

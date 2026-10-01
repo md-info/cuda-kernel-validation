@@ -1,0 +1,60 @@
+[
+  {
+    "args": [
+      "cmake",
+      "-S",
+      "/content/samples457/repo/cpp/0_Introduction/vectorAddDrv",
+      "-B",
+      "/content/samples457/fixed-default",
+      "-DCMAKE_CUDA_ARCHITECTURES=75",
+      "-DCMAKE_MODULE_PATH=/content/samples457/repo/cmake"
+    ],
+    "exit": 0,
+    "output": "-- The C compiler identification is GNU 13.3.0\n-- The CXX compiler identification is GNU 13.3.0\n-- The CUDA compiler identification is NVIDIA 13.0.88 with host compiler GNU 13.3.0\n-- Detecting C compiler ABI info\n-- Detecting C compiler ABI info - done\n-- Check for working C compiler: /usr/bin/cc - skipped\n-- Detecting C compile features\n-- Detecting C compile features - done\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: /usr/bin/c++ - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Detecting CUDA compiler ABI info\n-- Detecting CUDA compiler ABI info - done\n-- Check for working CUDA compiler: /usr/local/cuda/bin/nvcc - skipped\n-- Detecting CUDA compile features\n-- Detecting CUDA compile features - done\n-- Found CUDAToolkit: /usr/local/cuda/targets/x86_64-linux/include;/usr/local/cuda/targets/x86_64-linux/include/cccl (found version \"13.0.88\")\n-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n-- Found Threads: TRUE\n-- CUDA Samples installation configured:\n--   Architecture: x86_64\n--   OS: linux\n--   Build Type: release\n--   Install Prefix: /content/samples457/fixed-default/bin\n--   Install Directory: /content/samples457/fixed-default/bin/x86_64/linux/release\n-- Configuring done (3.0s)\n-- Generating done (0.0s)\n-- Build files have been written to: /content/samples457/fixed-default\n"
+  },
+  {
+    "args": [
+      "cmake",
+      "--build",
+      "/content/samples457/fixed-default",
+      "--target",
+      "generate_fatbin_vectorAdd",
+      "--verbose"
+    ],
+    "exit": 0,
+    "output": "Change Dir: '/content/samples457/fixed-default'\n\nRun Build Command(s): /usr/local/lib/python3.13/dist-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile generate_fatbin_vectorAdd\n/usr/local/lib/python3.13/dist-packages/cmake/data/bin/cmake -S/content/samples457/repo/cpp/0_Introduction/vectorAddDrv -B/content/samples457/fixed-default --check-build-system CMakeFiles/Makefile.cmake 0\n/usr/bin/gmake  -f CMakeFiles/Makefile2 generate_fatbin_vectorAdd\ngmake[1]: Entering directory '/content/samples457/fixed-default'\n/usr/local/lib/python3.13/dist-packages/cmake/data/bin/cmake -S/content/samples457/repo/cpp/0_Introduction/vectorAddDrv -B/content/samples457/fixed-default --check-build-system CMakeFiles/Makefile.cmake 0\n/usr/local/lib/python3.13/dist-packages/cmake/data/bin/cmake -E cmake_progress_start /content/samples457/fixed-default/CMakeFiles 1\n/usr/bin/gmake  -f CMakeFiles/Makefile2 CMakeFiles/generate_fatbin_vectorAdd.dir/all\ngmake[2]: Entering directory '/content/samples457/fixed-default'\n/usr/bin/gmake  -f CMakeFiles/generate_fatbin_vectorAdd.dir/build.make CMakeFiles/generate_fatbin_vectorAdd.dir/depend\ngmake[3]: Entering directory '/content/samples457/fixed-default'\ncd /content/samples457/fixed-default && /usr/local/lib/python3.13/dist-packages/cmake/data/bin/cmake -E cmake_depends \"Unix Makefiles\" /content/samples457/repo/cpp/0_Introduction/vectorAddDrv /content/samples457/repo/cpp/0_Introduction/vectorAddDrv /content/samples457/fixed-default /content/samples457/fixed-default /content/samples457/fixed-default/CMakeFiles/generate_fatbin_vectorAdd.dir/DependInfo.cmake \"--color=\"\ngmake[3]: Leaving directory '/content/samples457/fixed-default'\n/usr/bin/gmake  -f CMakeFiles/generate_fatbin_vectorAdd.dir/build.make CMakeFiles/generate_fatbin_vectorAdd.dir/build\ngmake[3]: Entering directory '/content/samples457/fixed-default'\n[100%] Building CUDA fatbin: /content/samples457/fixed-default/vectorAdd_kernel64.fatbin\n/usr/local/cuda/bin/nvcc -Wno-deprecated-gpu-targets -gencode=arch=compute_75,code=sm_75 -o /content/samples457/fixed-default/vectorAdd_kernel64.fatbin -fatbin /content/samples457/repo/cpp/0_Introduction/vectorAddDrv/vectorAdd_kernel.cu\ngmake[3]: Leaving directory '/content/samples457/fixed-default'\n[100%] Built target generate_fatbin_vectorAdd\ngmake[2]: Leaving directory '/content/samples457/fixed-default'\n/usr/local/lib/python3.13/dist-packages/cmake/data/bin/cmake -E cmake_progress_start /content/samples457/fixed-default/CMakeFiles 0\ngmake[1]: Leaving directory '/content/samples457/fixed-default'\n\n"
+  },
+  {
+    "args": [
+      "cmake",
+      "-S",
+      "/content/samples457/repo/cpp/0_Introduction/vectorAddDrv",
+      "-B",
+      "/content/samples457/fixed-explicit",
+      "-DCMAKE_CUDA_ARCHITECTURES=75",
+      "-DCMAKE_MODULE_PATH=/content/samples457/repo/cmake",
+      "-DCMAKE_CUDA_HOST_COMPILER=/usr/bin/g++"
+    ],
+    "exit": 0,
+    "output": "-- The C compiler identification is GNU 13.3.0\n-- The CXX compiler identification is GNU 13.3.0\n-- The CUDA compiler identification is NVIDIA 13.0.88 with host compiler GNU 13.3.0\n-- Detecting C compiler ABI info\n-- Detecting C compiler ABI info - done\n-- Check for working C compiler: /usr/bin/cc - skipped\n-- Detecting C compile features\n-- Detecting C compile features - done\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: /usr/bin/c++ - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Detecting CUDA compiler ABI info\n-- Detecting CUDA compiler ABI info - done\n-- Check for working CUDA compiler: /usr/local/cuda/bin/nvcc - skipped\n-- Detecting CUDA compile features\n-- Detecting CUDA compile features - done\n-- Found CUDAToolkit: /usr/local/cuda/targets/x86_64-linux/include;/usr/local/cuda/targets/x86_64-linux/include/cccl (found version \"13.0.88\")\n-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n-- Found Threads: TRUE\n-- CUDA Samples installation configured:\n--   Architecture: x86_64\n--   OS: linux\n--   Build Type: release\n--   Install Prefix: /content/samples457/fixed-explicit/bin\n--   Install Directory: /content/samples457/fixed-explicit/bin/x86_64/linux/release\n-- Configuring done (2.8s)\n-- Generating done (0.0s)\n-- Build files have been written to: /content/samples457/fixed-explicit\n"
+  },
+  {
+    "args": [
+      "cmake",
+      "--build",
+      "/content/samples457/fixed-explicit",
+      "--target",
+      "generate_fatbin_vectorAdd",
+      "--verbose"
+    ],
+    "exit": 0,
+    "output": "Change Dir: '/content/samples457/fixed-explicit'\n\nRun Build Command(s): /usr/local/lib/python3.13/dist-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile generate_fatbin_vectorAdd\n/usr/local/lib/python3.13/dist-packages/cmake/data/bin/cmake -S/content/samples457/repo/cpp/0_Introduction/vectorAddDrv -B/content/samples457/fixed-explicit --check-build-system CMakeFiles/Makefile.cmake 0\n/usr/bin/gmake  -f CMakeFiles/Makefile2 generate_fatbin_vectorAdd\ngmake[1]: Entering directory '/content/samples457/fixed-explicit'\n/usr/local/lib/python3.13/dist-packages/cmake/data/bin/cmake -S/content/samples457/repo/cpp/0_Introduction/vectorAddDrv -B/content/samples457/fixed-explicit --check-build-system CMakeFiles/Makefile.cmake 0\n/usr/local/lib/python3.13/dist-packages/cmake/data/bin/cmake -E cmake_progress_start /content/samples457/fixed-explicit/CMakeFiles 1\n/usr/bin/gmake  -f CMakeFiles/Makefile2 CMakeFiles/generate_fatbin_vectorAdd.dir/all\ngmake[2]: Entering directory '/content/samples457/fixed-explicit'\n/usr/bin/gmake  -f CMakeFiles/generate_fatbin_vectorAdd.dir/build.make CMakeFiles/generate_fatbin_vectorAdd.dir/depend\ngmake[3]: Entering directory '/content/samples457/fixed-explicit'\ncd /content/samples457/fixed-explicit && /usr/local/lib/python3.13/dist-packages/cmake/data/bin/cmake -E cmake_depends \"Unix Makefiles\" /content/samples457/repo/cpp/0_Introduction/vectorAddDrv /content/samples457/repo/cpp/0_Introduction/vectorAddDrv /content/samples457/fixed-explicit /content/samples457/fixed-explicit /content/samples457/fixed-explicit/CMakeFiles/generate_fatbin_vectorAdd.dir/DependInfo.cmake \"--color=\"\ngmake[3]: Leaving directory '/content/samples457/fixed-explicit'\n/usr/bin/gmake  -f CMakeFiles/generate_fatbin_vectorAdd.dir/build.make CMakeFiles/generate_fatbin_vectorAdd.dir/build\ngmake[3]: Entering directory '/content/samples457/fixed-explicit'\n[100%] Building CUDA fatbin: /content/samples457/fixed-explicit/vectorAdd_kernel64.fatbin\n/usr/local/cuda/bin/nvcc -Wno-deprecated-gpu-targets -ccbin=/usr/bin/g++ -gencode=arch=compute_75,code=sm_75 -o /content/samples457/fixed-explicit/vectorAdd_kernel64.fatbin -fatbin /content/samples457/repo/cpp/0_Introduction/vectorAddDrv/vectorAdd_kernel.cu\ngmake[3]: Leaving directory '/content/samples457/fixed-explicit'\n[100%] Built target generate_fatbin_vectorAdd\ngmake[2]: Leaving directory '/content/samples457/fixed-explicit'\n/usr/local/lib/python3.13/dist-packages/cmake/data/bin/cmake -E cmake_progress_start /content/samples457/fixed-explicit/CMakeFiles 0\ngmake[1]: Leaving directory '/content/samples457/fixed-explicit'\n\n"
+  },
+  {
+    "args": [
+      "nvidia-smi"
+    ],
+    "exit": 0,
+    "output": "Thu Oct  1 19:30:01 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 580.82.07              Driver Version: 580.82.07      CUDA Version: 13.0     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  Tesla T4                       Off |   00000000:00:04.0 Off |                    0 |\n| N/A   32C    P8              8W /   70W |       0MiB /  15360MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n"
+  }
+]
